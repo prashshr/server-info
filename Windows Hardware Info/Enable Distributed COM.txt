@@ -1,0 +1,13 @@
+Use DCOMCNFG.EXE
+Run Dcomcnfg.exe. 
+If you are running Windows XP or Windows Server 2003, perform these additional steps: 
+Click the Component Services node under Console Root.
+Open the Computers folder. 
+For the local computer, right-click My Computer, and then click Properties. 
+For a remote computer, right-click Computers folder, point to New, and then click Computer. 
+Type the computer name. 
+Right-click the computer name, and then click Properties. 
+Click the Default Properties tab. 
+Click to select (or click to clear) the Enable Distributed COM on this Computer check box.
+If you want to set more properties for the computer, click Apply to enable (or disable) DCOM. Otherwise, click OK to apply the changes and quit Dcomcnfg.exe.
+Restart the operating system for the changes to take effect.

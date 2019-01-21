@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<TITLE>CLSA Windows Server Information Portal</TITLE>
+	<META http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<META name="GENERATOR" content="MSHTML 6.00.2800.1264">
+	<META http-equiv="MSThemeCompatible" content="Yes">
+	<HTA:APPLICATION
+		WINDOWSTATE="normal"
+		SYSMENU="yes"
+		SINGLEINSTANCE="no"
+		SHOWINTASKBAR="yes"
+		SELECTION="yes"
+		SCROLLFLAT="no"
+		SCROLL="no"
+		NAVIGABLE="yes"
+		MINIMIZEBUTTON="yes"
+		MAXIMIZEBUTTON="yes"
+		INNERBORDER="yes"
+		CONTEXTMENU="no"
+		CAPTION="yes"
+		BORDERSTYLE="normal"
+		BORDER="thick"
+		APPLICATIONNAME="Windows Hardware Info"
+		ICON="HardwareInfo.ico"></HTA:APPLICATION>
+	<LINK href="HardwareInfo.css" type="text/css" rel="stylesheet">
+<SCRIPT language="VBScript" src="HardwareInfo.vbs">
+
+</SCRIPT>
+</HEAD>
+<BODY onLoad="servername.value='.'">
+
+<STRONG>Server name:</STRONG>
+<input type="text" name="servername" id="servername" value="."/> 
+<input type="submit" name="submitserver" value="Go" onclick="GetServername"/>
+
+	<DIV id="divControls">
+		<TABLE id="tblControls" border="1" width="100%">
+			<TBODY>
+				<TR>
+					<TD><A href="#" onclick="ShowSystemInformation()"><STRONG>System Information</STRONG></A></TD>
+					<TD><A href="#" onclick="ShowNetworkInfo()">Network Information</A></TD>									
+					<TD><A href="#" onclick="ShowDiskUsage()">Disk Usage</A></TD>
+					<TD><A href="#" onclick="ShowProcessorInfo()">Processor</A></TD>
+					
+				</TR>
+				<TR>
+					<TD><A href="#" onclick="ShowPhysicalMemoryConfigurations()">Memory configurations</A></TD>
+					<TD><A href="#" onclick="ShowBIOSInfo()">BIOS</A></TD>				
+					<TD><A href="#" onclick="ShowCacheMemoryInfo()">Cache memory</A></TD>
+					<TD><A href="#" onclick="ShowComputerBusInfo()">Computer bus</A></TD>
+				</TR>
+				<TR>							
+					<TD><A href="#" onclick="ShowSystemSlotInfo()">Baseboard\System Slot </A></TD>
+					<TD><A href="#" onclick="ShowSerialPortInfo()">Parallel\Serial ports</A></TD>
+					<TD><A href="#" onclick="ShowPortConnectorInfo()">Port connector</A></TD>
+					<TD><A href="#" onclick="ShowIRQSettingsInfo()">IRQ settings</A></TD>																	
+				</TR>
+				
+<!-- 				<TR>
+					<TD><A href="#" onclick="ShowKeyboardInfo()">Keyboard</A></TD>
+					<TD><A href="#" onclick="ShowSoundCardInfo()">Sound card</A></TD>
+					<TD><A href="#" onclick="ShowPointingDevicesInfo()">Pointing devices</A></TD>
+					<TD><A href="#" onclick="ShowVideoControllerInfo()">Video controller</A></TD>
+					
+				</TR> -->
+				
+			</TBODY>
+		</TABLE>
+	</DIV>
+	<P id="pOutput"></P>
+
+	<H1 id="headOutput"></H1>
+
+	<DIV id="divOutput"></DIV>
+	<DIV id="divFooter">
+		<P id="creator">This portal is only for internal purposes. Maintained by <A href="mailto:Server_team@clsa.com?subject=Query: CLSA Windows Server Information Portal&cc=ovadmin@clsa.com" target="_blank"><STRONG>
+			Server Team</STRONG></A>.</P>
+	</DIV> 		
+	
+</BODY>
+</HTML>
